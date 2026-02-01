@@ -64,5 +64,12 @@ function saveBookMark() {
   localStorage.setItem("boookmarks", JSON.stringify(bookmarks));
 }
 
+function loadBookmarks() {
+  const bookmarks = getBookmarksFromStorage();
+  bookmarks.forEach((bookmark) => {
+    addbookmark(bookmark.name, bookmark.url);
+  })
+}
+
 // TODO: implement function
-function loadBookmarks() {}
+function removeBookmarkFromStorage() {}
