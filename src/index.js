@@ -27,8 +27,8 @@ addbookmarkBtn.addEventListener("click", function () {
       return;
     }
 
-    addbookmark(name,url);
-    saveBookmarks(name,url);
+    addbookmark(name, url);
+    saveBookmarks(name, url);
     bookmarkNameInput.value = "";
     bookmakrUrlInput.value = "";
   }
@@ -60,7 +60,7 @@ function getBookmarksFromStorage() {
 
 function saveBookMark() {
   const bookmarks = getBookmarksFromStorage();
-  bookmarks.push({name,url});
+  bookmarks.push({ name, url });
   localStorage.setItem("boookmarks", JSON.stringify(bookmarks));
 }
 
@@ -68,14 +68,14 @@ function loadBookmarks() {
   const bookmarks = getBookmarksFromStorage();
   bookmarks.forEach((bookmark) => {
     addbookmark(bookmark.name, bookmark.url);
-  })
+  });
 }
 
 // TODO: implement function
 function removeBookmarkFromStorage() {
   const bookmarks = getBookmarksFromStorage();
   bookmarks = bookmarks.filter((bookmark) => {
-    bookmark.name !== name || bookmark.url !== url
+    bookmark.name !== name || bookmark.url !== url;
   });
   localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
 }
