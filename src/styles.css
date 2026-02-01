@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+:root {
+    --primary: #00ffa2;
+    --shadow-m: rgba(0, 0, 0, 0.1);
+}
+
 body {
   font-family: sans-serif;
   background-color: #f0f0f0;
@@ -18,14 +23,14 @@ body {
   background: #fff;
   padding: 20px;
   border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px var(--shadow-m);
   max-width: 400px;
   width: 90%;
   text-align: center;
 }
 
 h1 {
-    color: #00ffa2;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -40,4 +45,13 @@ input {
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
