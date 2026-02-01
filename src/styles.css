@@ -76,3 +76,22 @@ button:hover {
     justify-content: space-between;
     align-items: center;
 }
+
+#bookmark-list a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+#bookmark-list button {
+    background-color: #e71313;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#bookmark-list button:hover {
+    background-color: #d21010;
+}
