@@ -3,24 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bookmark-Saver</title>
-
-    <!-- Loading in Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <title>Bookmark Saver</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="icon" href="assets/icons/webicon.png" type="image/x-icon">
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
+    <div class="app-container">
+      <h1>Bookmark Saver</h1>
+      <div class="input-containe">
+        <input type="text" id="bookmark-name" placeholder="Bookmark Name">
+        <input type="url" id="bookmark-url" placeholder="Bookmark URL">
+        <button type="button" id="add-bookmark">Add Bookmark</button>
+      </div>
 
-    <main class="container">
-      <h1>Hello Website!</h1>
-      <button type="button">Click Me</button>
-    </main>
+      <ul id="bookmark-list"></ul>
+    </div>
 
     <script type="module" src="src/index.js"></script>
   </body>
