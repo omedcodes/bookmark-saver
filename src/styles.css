@@ -6,6 +6,7 @@
 
 :root {
     --primary: #00ffa2;
+    --primary-hover: #2ccd6f;
     --shadow-m: rgba(0, 0, 0, 0.1);
 }
 
@@ -54,4 +55,24 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+#bookmark-list {
+    list-style: none;
+    padding: 0;
+}
+
+#bookmark-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: solid 1px #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
