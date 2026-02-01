@@ -53,6 +53,11 @@ function addbookmark(name, input) {
   bookmarkList.appendChild(li);
 }
 
+function getBookmarksFromStorage() {
+  const bookmarks = localStorage.getItem("bookmarks");
+  return bookmarks ? JSON.parse(bookmarks) : [];
+}
+
 // TODO: implement functions
-function getBookmarksFromStorage() {}
+function saveBookMarks() {}
 function loadBookmarks() {}
