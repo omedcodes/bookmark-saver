@@ -84,12 +84,7 @@ button:hover {
 
 #bookmark-list button {
   background-color: #e71313;
-  color: white;
-  border: none;
-  border-radius: 6px;
   padding: 8px 10px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 #bookmark-list button:hover {
