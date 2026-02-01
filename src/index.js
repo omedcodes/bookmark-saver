@@ -27,11 +27,32 @@ addbookmarkBtn.addEventListener("click", function () {
       return;
     }
 
-    addbookmarkBtn(name,url);
+    addbookmark(name,url);
     saveBookmarks(name,url);
     bookmarkNameInput.value = "";
     bookmakrUrlInput.value = "";
   }
 });
 
+function addbookmark(name, input) {
+  const li = document.createElement("li");
+  const link = document.createElement("a");
+  link.href = url;
+  link.textContent = name;
+  link.target = "_blank";
+
+  const removeLink = document.createElement("button");
+  removeLink.textContent = "Remove";
+  removeLink.addEventListener("click", () => {
+    bookmarkList.removeChild(li);
+    removeBookmarkFromStorage();
+  });
+
+  li.appendChild(link);
+  li.appendChild(removeLink);
+  bookmarkList.appendChild(li);
+}
+
+// TODO: implement functions
+function getBookmarksFromStorage() {}
 function loadBookmarks() {}
