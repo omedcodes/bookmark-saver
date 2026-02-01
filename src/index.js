@@ -58,6 +58,11 @@ function getBookmarksFromStorage() {
   return bookmarks ? JSON.parse(bookmarks) : [];
 }
 
-// TODO: implement functions
-function saveBookMarks() {}
+function saveBookMark() {
+  const bookmarks = getBookmarksFromStorage();
+  bookmarks.push({name,url});
+  localStorage.setItem("boookmarks", JSON.stringify(bookmarks));
+}
+
+// TODO: implement function
 function loadBookmarks() {}
