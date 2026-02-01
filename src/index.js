@@ -28,13 +28,13 @@ addbookmarkBtn.addEventListener("click", function () {
     }
 
     addbookmark(name, url);
-    saveBookmarks(name, url);
+    saveBookmark(name, url);
     bookmarkNameInput.value = "";
     bookmakrUrlInput.value = "";
   }
 });
 
-function addbookmark(name, input) {
+function addbookmark(name, url) {
   const li = document.createElement("li");
   const link = document.createElement("a");
   link.href = url;
@@ -58,7 +58,7 @@ function getBookmarksFromStorage() {
   return bookmarks ? JSON.parse(bookmarks) : [];
 }
 
-function saveBookMark() {
+function saveBookmark() {
   const bookmarks = getBookmarksFromStorage();
   bookmarks.push({ name, url });
   localStorage.setItem("boookmarks", JSON.stringify(bookmarks));
@@ -71,7 +71,6 @@ function loadBookmarks() {
   });
 }
 
-// TODO: implement function
 function removeBookmarkFromStorage() {
   const bookmarks = getBookmarksFromStorage();
   bookmarks = bookmarks.filter((bookmark) => {
